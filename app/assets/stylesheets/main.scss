@@ -1,0 +1,13 @@
+.background {
+    background-color: brown;
+}
+
+.card {
+    max-width: min-content;
+    margin: 15px;
+}
+
+.card:hover {
+    box-shadow: 2px 2px 8px 3px black;
+    transition: box-shadow 0.3s ease-in-out;
+}
