@@ -29,10 +29,20 @@ const VideosIndexContainer = (props) => {
   }, [])
   
   const videoList = videos.map((video) => {
-      if (props.familiarity === video.familiarity) {
+      if (props.familiarity === "All Videos") {
         return (
           <div >
-            <p>Happy Test</p>
+              <VideoTile
+                key={video.id}
+                video={video}
+              />
+          </div>
+        ) 
+      }
+      else if ((video.familiarity).includes(props.familiarity)) {
+      console.log(video.familiarity)
+        return (
+          <div >
               <VideoTile
                 key={video.id}
                 video={video}
@@ -40,21 +50,18 @@ const VideosIndexContainer = (props) => {
           </div>
         )
       }
-      else {
-        return(
-          <div>
-            <p>Sad Test</p>
-          </div>
-          )
-          }
-      end
-  })
+  }
+  )
   
   return (
-    <div>
-      <h2>Video Index</h2>
-      {videoList}
-    </div>
+      <div>
+        <div className="grid-x review-header">
+          <h2>Video Index</h2>
+        </div>
+          <div className="grid-x">
+            {videoList}
+          </div>
+      </div>
   )
 }
 

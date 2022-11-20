@@ -7,18 +7,20 @@ const VideoTile = (props) => {
 
     return(
         <div>
-            <Link to={`/videos/${video.id}`}>
-                <div className="card">
-                    <div className="card-divider"> 
-                        <p>{video.title}</p>
+            <div className="card callout">
+                <Link to={`/videos/${video.id}`}>
+                    <div>
+                        <div>
+                            <p>{video.title}</p>
+                        </div>
+                        <div>
+                            <p>{video.url}</p>
+                        </div>
                     </div>
-                    <div className="card-section">
-                        <p>{video.url}</p>
-                    </div>
-                </div>
-            </Link>
+                </Link>
+            </div>
         </div>
     )
-}
+    }
 
   export default VideoTile

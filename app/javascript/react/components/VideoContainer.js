@@ -26,17 +26,13 @@ const [video, setVideo] = useState({ current_user: {} })
   }, [])
 
   return (
-    <div>
+    <div className="card callout left-margin">
       <h3>Video Show</h3>
       <p>{video.title}</p>
-      <p>{video.description}</p>
       <p>{video.upload_date}</p>
-      <p>{video.url}</p>
       <p>{video.rating}</p>
       <p>{video.familiarity}</p>
       <p>{video.type}</p>
-      <p>{video.creator_id}</p>
-      <p>{video.list_id}</p>
     </div>
   )
 }
