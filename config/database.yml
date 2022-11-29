@@ -80,6 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: minecraft-breakable-toy_production
-  username: minecraft-breakable-toy
-  password: <%= ENV['MINECRAFT-BREAKABLE-TOY_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
