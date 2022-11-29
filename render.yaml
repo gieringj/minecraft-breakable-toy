@@ -7,6 +7,7 @@ services:
   - type: web
     name: LearnCraft
     env: ruby
+    region: ohio
     plan: free
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec rails server"
