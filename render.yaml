@@ -2,6 +2,7 @@ databases:
   - name: postgres
     ipAllowList: []
     plan: free
+    region: ohio
 
 services:
   - type: web
