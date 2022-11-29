@@ -1,4 +1,4 @@
-class Videos < ActiveRecord::Migration[5.2]
+class CreateVideos < ActiveRecord::Migration[5.2]
   def change
     create_table :videos do |t|
       t.string :title, null: false
@@ -7,7 +7,7 @@ class Videos < ActiveRecord::Migration[5.2]
       t.string :url, null: false
       t.string :rating
       t.string :familiarity
-      t.string :type
+      t.string :video_type
       t.belongs_to :creator
       t.belongs_to :list
     end

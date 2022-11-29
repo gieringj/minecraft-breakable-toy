@@ -1,4 +1,4 @@
-class Categorizations < ActiveRecord::Migration[5.2]
+class CreateCategorizations < ActiveRecord::Migration[5.2]
   def change
     create_table :categorizations do |t|
     t.string :video_id
