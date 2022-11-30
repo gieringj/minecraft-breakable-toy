@@ -1,3 +1,3 @@
 class Categorization < ApplicationRecord
-    validates :video_id, :category_id
+    # validates :video_id, :category_id
 end

@@ -8,7 +8,7 @@ gem 'rails', '~> 5.2.5'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
-gem 'puma', '~> 6.0.0'
+gem 'puma', '~> 3.11.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -25,10 +25,6 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-
-group :development, :test do
-
-end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
