@@ -9,6 +9,7 @@ import CreatorContainer from './CreatorContainer'
 export const App = (props) => {
 
   const [familiarity, setFamiliarity] = useState("")
+  const [type, setType] = useState("")
   
   return (
   
@@ -18,11 +19,14 @@ export const App = (props) => {
           <HomeContainer 
             familiarity={familiarity}
             setFamiliarity={setFamiliarity} 
+            type={type}
+            setType={setType}
           />
         </Route>
         <Route exact path="/videos">
           <VideosIndexContainer
             familiarity={familiarity}
+            type={type}
           />
         </Route> 
         <Route exact path="/videos/:id" component={VideoContainer} />

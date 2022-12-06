@@ -1,10 +1,42 @@
 body {
-    background-color: #9BDCE9
-    ;
+    background-color: #5c565638;
+}
+iframe {
+    width: 40rem;
+    height: 100%;
+}
+
+.top-bar-color {
+    background-color: #f50202b5;
+    color: black;
+}
+
+.image {
+    margin: auto;
+    width: 90%;
+    height: 80%;
+}
+
+.video {
+    border-radius: 4px;  /* Rounded border */
+    width: 75%; /* Set a small width */
+    height: 25rem;
 }
 
 .margin-left {
-    margin-left: 1rem;
+    margin-left: 2rem;
+}
+
+.more-margin-left {
+    margin-left: 3rem
+}
+
+.center-margin {
+    margin-left: auto;
+}
+
+.center-text {
+    text-align: center;
 }
 
 .card {
@@ -12,16 +44,22 @@ body {
     border: solid black .25rem;
     width: 30rem;
     height: 15rem;
-
+    font-size: larger;
 }
 
 .card-thin {
     margin: 1rem;
     border: solid black .25rem;
     height: 5rem;
+    width: 100%;
+    font-size: larger;
 }
 
 .card:hover {
     box-shadow: 2px 2px 8px 3px black;
     transition: box-shadow 0.3s ease-in-out;
+}
+
+.color-black {
+    color: black;
 }

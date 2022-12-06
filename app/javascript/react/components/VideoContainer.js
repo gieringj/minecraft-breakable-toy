@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react"
 import { withRouter } from "react-router-dom"
+import { render } from "react-dom";
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import 'react-lite-youtube-embed/dist/LiteYouTubeEmbed.css'
 
 const VideoContainer = (props) => {
 
@@ -24,20 +27,23 @@ const [video, setVideo] = useState({ current_user: {} })
   useEffect(() => {
     fetchVideo()
   }, [])
-
+  
   return (
-    <div className="card callout left-margin">
-      <h3>Video Show</h3>
-      <p>{video.title}</p>
-      <p>{video.upload_date}</p>
-      <p>{video.rating}</p>
-      <p>{video.familiarity}</p>
-      <p>{video.type}</p>
+    <div className="margin-left">
+      <h3>{video.title}</h3>
+      <div className="video">
+          <iframe 
+            src={`https://www.youtube.com/embed/${video.url}`} 
+            title="YouTube video player" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+          </iframe>
+      </div>
+      <div>
+        <p> {video.familiarity}  |  {video.video_type}  |  {video.rating}/10  |  Uploaded: {video.upload_date}</p>
+      </div>
     </div>
   )
 }
 
 export default withRouter(VideoContainer)
-
-
-
